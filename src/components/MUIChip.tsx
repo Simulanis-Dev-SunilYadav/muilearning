@@ -13,7 +13,7 @@ const MUIChip = () => {
           variant="outlined"
           avatar={<Avatar>D</Avatar>}
         />
-        <Chip
+        {/* <Chip
           label="Clickable Chip"
           color="error"
           size="medium"
@@ -21,7 +21,7 @@ const MUIChip = () => {
           avatar={<Avatar>D</Avatar>}
           onclick={() => alert("Delete Chip clicked!")}
           onDelete={() => alert("Chip deleted!")}
-        />
+        /> */}
 
       </Stack>
     </>
