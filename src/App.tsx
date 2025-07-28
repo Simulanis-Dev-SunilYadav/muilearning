@@ -12,6 +12,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Router>
         <Box sx={{ display: "flex" }}>
           <CssBaseline />
@@ -31,7 +32,6 @@ const App = () => {
             }}
           >
             <SidebarHeader />
-
           </Drawer>
           <Box component="main" sx={{ flexGrow: 1, bgcolor: "background.default", p: 4 }}>
             <Toolbar />

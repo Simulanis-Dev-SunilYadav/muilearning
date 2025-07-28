@@ -9,6 +9,15 @@ export const navItems = [
   { text: "Nav Items", path: "/navitems" },
   { text: "List", path: "/list" },
   { text: "Chip", path: "/chip" },
-
-
+  { text: "Table", path: "/table" },
+  { text: "Alerts", path: "/alerts" },
+  { text: "Snackbar", path: "/snackbar" },
+  { text: "Dialog", path: "/dialog" },
+  { text: "Progress", path: "/progress" },
+  { text: "Skelton", path: "/skelton" },
+  { text: "Date Time", path: "/datetimerange" },
+  { text: "Tabs", path: "/tabs" },
+  { text: "Timeline", path: "/timeline" },
+  { text: "Masonry", path: "/masonry" },
+  { text: "Theme Customization", path: "/themecustomization" },
 ]; 
