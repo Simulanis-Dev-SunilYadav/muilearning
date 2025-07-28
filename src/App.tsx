@@ -2,9 +2,9 @@ import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/s
 import { Box, CssBaseline, Drawer, Toolbar, AppBar, Typography } from "@mui/material";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { RoutesList } from "./routes";
-import SidebarHeader from "./SidebarHeader";
-
-const drawerWidth = 240;
+import SidebarHeader from "./common/Sidebar";
+import Header from "./common/Header";
+import MainLayout from "./common/MainLayout";
 
 const App = () => {
   let theme = createTheme();
@@ -14,30 +14,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Box sx={{ display: "flex" }}>
-          <CssBaseline />
-          <AppBar>
-            <Toolbar>
-              <Typography variant="h6" noWrap component="div">
-                MUI Sidebar App
-              </Typography>
-            </Toolbar>
-          </AppBar>
-          <Drawer
-            variant="permanent"
-            sx={{
-              width: drawerWidth,
-              flexShrink: 0,
-              [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: "border-box" },
-            }}
-          >
-            <SidebarHeader />
-          </Drawer>
-          <Box component="main" sx={{ flexGrow: 1, bgcolor: "background.default", p: 4 }}>
-            <Toolbar />
-            <RoutesList />
-          </Box>
-        </Box>
+        <MainLayout showHeader={true} showSidebar={true} />
       </Router>
     </ThemeProvider>
   );

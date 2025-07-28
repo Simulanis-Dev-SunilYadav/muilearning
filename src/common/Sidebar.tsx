@@ -1,9 +1,9 @@
 import { Box, CssBaseline, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, AppBar, Typography } from "@mui/material";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-import { navItems } from "./navItems";
+import { navItems } from "../navItems";
 
-const SidebarHeader = () => (
+const Sidebar = () => (
   <>
     <Box sx={{ p: 2, textAlign: "center" }}>
       <Typography variant="h6" noWrap component="div">
@@ -24,4 +24,4 @@ const SidebarHeader = () => (
   </>
 );
 
-export default SidebarHeader; 
+export default Sidebar; 
