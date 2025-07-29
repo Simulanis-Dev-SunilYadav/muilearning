@@ -20,38 +20,45 @@ const MainLayout: React.FC<MainLayoutProps> = ({ showHeader = true, showSidebar 
   return (
     <>
       <CssBaseline />
-      {showHeader && (
-        <>
-          <Header showSidebar={showSidebar && sidebarOpen} onToggleSidebar={toggleSidebar} />
-          <Toolbar />
-        </>
-      )}
+
       <Box sx={{ display: "flex" }}>
+        {/* Sidebar */}
         {showSidebar && sidebarOpen && (
           <Drawer
             variant="persistent"
-            open={sidebarOpen}
+            open
             sx={{
               width: DRAWER_WIDTH,
               flexShrink: 0,
-              [`& .MuiDrawer-paper`]: { width: DRAWER_WIDTH },
+              [`& .MuiDrawer-paper`]: {
+                width: DRAWER_WIDTH,
+                boxSizing: "border-box",
+              },
             }}
           >
             <Sidebar />
           </Drawer>
         )}
 
-        <Box
-          component="main"
-          sx={{
-            flexGrow: 1,
-            bgcolor: "background.default",
-            p: 4,
-            ml: showSidebar && sidebarOpen ? `${DRAWER_WIDTH}px` : 0,
-            transition: "margin 0.3s",
-          }}
-        >
-          <RoutesList />
+        {/* Main Area */}
+        <Box>
+          {/* Header */}
+          {showHeader && (
+            <>
+              <Header showSidebar={showSidebar} onToggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
+              <Toolbar />
+            </>
+          )}
+          {/* Page Content */}
+          <Box
+            component="main"
+            sx={{
+              p: 3,
+              transition: "margin 0.3s",
+            }}
+          >
+            <RoutesList />
+          </Box>
         </Box>
       </Box>
     </>

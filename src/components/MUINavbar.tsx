@@ -110,7 +110,7 @@ const MUINavbar = () => {
         </Breadcrumbs>
       </Box>
 
-      <MUIDrawer />
+      {/* <MUIDrawer /> */}
 
       <MUISpeedDial />
 
@@ -118,7 +118,6 @@ const MUINavbar = () => {
       <br />
       <br />
       <MUIBadge />
-      
 
       <MUIBottomNavigation />
     </>
